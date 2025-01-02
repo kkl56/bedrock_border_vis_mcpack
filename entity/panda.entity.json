@@ -1,0 +1,70 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:panda",
+      "materials": { "default": "panda" },
+      "textures": {
+        "default": "textures/entity/panda/panda",
+        "lazy": "textures/entity/panda/panda_lazy",
+        "worried": "textures/entity/panda/panda_worried",
+        "playful": "textures/entity/panda/panda_playful",
+        "brown": "textures/entity/panda/panda_brown",
+        "weak": "textures/entity/panda/panda_sneezy",
+        "aggressive": "textures/entity/panda/panda_aggressive"
+      },
+      "geometry": {
+        "default": "geometry.panda",
+        "target": "geometry.target_rotate_16",
+        "block": "geometry.block_16"
+      },
+      "particle_effects": {
+      
+         "invisible": "invisible",
+         "status_setup": "status_setup",
+         "health_setup": "health_setup",
+         "hostile_warnings": "hostile_warnings",
+         "pos": "pos",
+         "pos_egg": "pos_panda"
+      },
+      "sound_effects": {"inception_horn": "inception_horn", "inception_horn_loud": "inception_horn_loud", "mob_sound": "loud_mob.panda.idle"},
+      
+      "animations": {
+        "target_rotate": "animation.target_rotate", 
+        "camera_rotate": "animation.camera_rotate",
+        
+        "unhappy": "animation.panda.unhappy",
+        "sneezing": "animation.panda.sneezing",
+        "walk": "animation.quadruped.walk",
+        "look_at_target": "animation.common.look_at_target",
+        "baby_transform": "animation.panda.baby_transform",
+        "sitting": "animation.panda.sitting",
+        "rolling": "animation.panda.rolling",
+        "lying": "animation.panda.lying"
+      },
+      "animation_controllers": [
+        { "1": "controller.animation.target_rotate_setup" }, 
+ 		{ "1.1": "controller.animation.camera_rotate_setup" },
+        { "2": "controller.animation.invisible" },
+        { "3": "controller.animation.status" },
+        { "4": "controller.animation.numbers" },
+        { "5": "controller.animation.hostile_warnings" },
+        { "6": "controller.animation.pos" },
+        
+        { "move": "controller.animation.panda.move" },
+        { "unhappy": "controller.animation.panda.unhappy" },
+        { "sneezing": "controller.animation.panda.sneezing" },
+        { "baby": "controller.animation.panda.baby" }
+      ],
+      "render_controllers": [ 
+        "controller.render.target_rotate",
+        "controller.render.block",
+        "controller.render.panda" 
+      ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 54
+      }
+    }
+  }
+}

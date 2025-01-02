@@ -1,0 +1,80 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:vindicator",
+      "min_engine_version": "1.8.0",
+      "materials": { "default": "vindicator" },
+      "textures": { "default": "textures/entity/vindicator" },
+      "geometry": { 
+        "default": "geometry.vindicator.v1.8",
+        "target": "geometry.target_rotate_28",
+        "block": "geometry.block_28"
+      },
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 39
+      },
+      "scripts": {
+        "scale": "0.9375",
+        "animate": [
+          "target_rotate", 
+		  "camera_rotate",
+          "hostile_warnings",
+          "invisible",
+          "status",
+          "numbers",
+          "pos",
+          
+          "vindicator_base",
+          "vindicator_walk",
+
+          "controller_look_at_target",
+          "controller_vindicator_base",
+          "controller_riding"
+        ]
+      },
+      "particle_effects": {
+      
+         "invisible": "invisible",
+         "status_setup": "status_setup",
+         "health_setup": "health_setup",
+         "hostile_warnings": "hostile_warnings",
+         "pos": "pos",
+         "pos_egg": "pos_vindicator"
+      },
+      "sound_effects": {"inception_horn": "inception_horn", "inception_horn_loud": "inception_horn_loud", "mob_sound": "loud_mob.vindicator.idle"},
+      
+      "animations": {
+        "invisible": "controller.animation.invisible",
+        "status": "controller.animation.status",
+        "numbers": "controller.animation.numbers",
+        "target_rotate": "animation.target_rotate", 
+        "camera_rotate": "animation.camera_rotate",
+        "hostile_warnings": "controller.animation.hostile_warnings",
+        "pos": "controller.animation.pos",
+        
+        "look_at_target_default": "animation.humanoid.look_at_target.default",
+        "look_at_target_gliding": "animation.humanoid.look_at_target.gliding",
+        "look_at_target_swimming": "animation.humanoid.look_at_target.swimming",
+        "riding.arms": "animation.vindicator.riding.arms",
+        "riding.legs": "animation.vindicator.riding.legs",
+        "vindicator_base": "animation.vindicator.base",
+        "vindicator_attack": "animation.vindicator.attack",
+        "vindicator_hand_attack": "animation.vindicator.hand_attack",
+        "vindicator_walk": "animation.vindicator.walk",
+        "celebrating": "animation.humanoid.celebrating",
+        "controller_look_at_target": "controller.animation.humanoid.look_at_target",
+        "controller_vindicator_base": "controller.animation.vindicator.base",
+        "controller_riding": "controller.animation.humanoid.riding"
+      },
+      "render_controllers": [ 
+        "controller.render.target_rotate",
+        "controller.render.block",
+        "controller.render.vindicator"
+      ],
+      "enable_attachables": true,
+      "hide_armor": true
+    }
+  }
+}

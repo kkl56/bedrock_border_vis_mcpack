@@ -1,0 +1,67 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:hoglin",
+      "materials": { "default": "hoglin" },
+      "textures": {
+        "default": "textures/entity/hoglin/hoglin"
+      },
+      "geometry": {
+        "default": "geometry.hoglin",
+        "target": "geometry.target_rotate_28",
+        "block": "geometry.block_28"
+      },
+      "spawn_egg": {
+        "base_color": "#C66E55",
+        "overlay_color": "#5f6464"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.tcos_right_side = (Math.cos(query.modified_distance_moved * 38.17) * query.modified_move_speed / variable.gliding_speed_value) * 57.3;",
+          "variable.tcos_left_side = -variable.tcos_right_side;",
+          "variable.attack_head_rot =  Math.sin(variable.attack_time * 180.0) * -37.3;"
+        ]
+      },
+      "particle_effects": {
+      
+         "invisible": "invisible",
+         "status_setup": "status_setup",
+         "health_setup": "health_setup",
+         "hostile_warnings": "hostile_warnings",
+         "pos": "pos",
+         "pos_egg": "pos_hoglin"
+      },
+      "sound_effects": {"inception_horn": "inception_horn", "inception_horn_loud": "inception_horn_loud", "mob_sound": "loud_mob.hoglin.angry"},
+      
+      "animations": {
+        "target_rotate": "animation.target_rotate", 
+        "camera_rotate": "animation.camera_rotate",
+        
+        "walk": "animation.hoglin.walk",
+        "look_at_target": "animation.hoglin.look_at_target",
+        "attack": "animation.hoglin.attack",
+        "hoglin_baby_scaling": "animation.hoglin.baby_scaling"
+      },
+      "animation_controllers": [
+        { "1": "controller.animation.target_rotate_setup" }, 
+ 		{ "1.1": "controller.animation.camera_rotate_setup" },
+        { "2": "controller.animation.invisible" },
+        { "3": "controller.animation.status" },
+        { "4": "controller.animation.numbers" },
+        { "5": "controller.animation.hostile_warnings" },
+        { "6": "controller.animation.pos" },
+        
+        { "look_at_target": "controller.animation.hoglin.look_at_target" },
+        { "walk": "controller.animation.hoglin.walk" },
+        { "attack": "controller.animation.hoglin.attack" },
+        { "hoglin_baby_scaling": "controller.animation.hoglin.baby_scaling"}
+      ],
+      "render_controllers": [ 
+        "controller.render.target_rotate",
+        "controller.render.block",
+        "controller.render.hoglin"
+      ]
+    }
+  }
+}

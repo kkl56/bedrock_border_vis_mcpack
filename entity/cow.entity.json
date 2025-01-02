@@ -1,0 +1,67 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:cow",
+      "min_engine_version": "1.8.0",
+      "materials": { "default": "cow" },
+      "textures": {
+        "default": "textures/entity/cow/cow"
+      },
+      "geometry": {
+        "default": "geometry.cow.v1.8",
+        
+        "target": "geometry.target_rotate_16",
+        "block": "geometry.block_16"
+      },
+      "particle_effects": {
+         "invisible": "invisible",
+         "status_setup": "status_setup",
+         "health_setup": "health_setup",
+         "hostile_warnings": "hostile_warnings",
+         "pos": "pos",
+         "pos_egg": "pos_cow"
+      },
+      "sound_effects": {"inception_horn": "inception_horn", "inception_horn_loud": "inception_horn_loud", "mob_sound": ""},
+      
+      "animations": {
+        "invisible": "controller.animation.invisible",
+        "status": "controller.animation.status",
+        "numbers": "controller.animation.numbers",
+        "target_rotate": "animation.target_rotate", 
+        "camera_rotate": "animation.camera_rotate",
+        "hostile_warnings": "controller.animation.hostile_warnings",
+        "pos": "controller.animation.pos",
+        
+        "setup": "animation.cow.setup",
+        "walk": "animation.quadruped.walk",
+        "look_at_target": "animation.common.look_at_target",
+        "baby_transform": "animation.cow.baby_transform"
+      },
+      "scripts": {
+        "animate": [
+          "target_rotate", 
+		  "camera_rotate",
+          "hostile_warnings",
+          "invisible",
+          "status",
+          "numbers",
+          "pos",
+          
+          "setup",
+          { "walk": "query.modified_move_speed" },
+          "look_at_target",
+          { "baby_transform": "query.is_baby" }
+        ]
+      },
+      "render_controllers": [ 
+"controller.render.target_rotate",
+"controller.render.block",
+        "controller.render.cow" ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 1
+      }
+    }
+  }
+}

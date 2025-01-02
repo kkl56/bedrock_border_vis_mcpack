@@ -1,0 +1,35 @@
+// File made and modified by @tlgm2308 (Twitter).
+// Please respect my works ;-;, and do not steal my code without permissions!
+{
+  "generic_label": {
+    "visible": "$label_visible",
+    "$label_visible|default": true
+  },
+
+  "header_area/inventory_header": {
+    "$label_visible": false
+  },
+
+  "header_area": {
+    "modifications": [
+      {
+        "array_name": "controls",
+        "operation": "insert_back",
+        "value": [
+          {
+            "tyel_quick_move_mode_toggle@tyel_quick_move.tyel_quick_move_mode_toggle_pocket": {
+              "anchor_from": "top_left",
+              "anchor_to": "top_left",
+              "offset": [ "5%", -1 ],
+              "size": [ "35%", "27px" ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "inventory_grid": {
+    "$button_ref": "tyel_quick_move.container_slot_button_prototype_panel_with_quick_move"
+  }
+}

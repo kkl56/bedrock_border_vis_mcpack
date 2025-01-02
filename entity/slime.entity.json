@@ -1,0 +1,66 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:slime",
+      "materials": {
+        "default": "slime",
+        "outer": "slime_outer"
+      },
+      "textures": {
+        "default": "textures/entity/slime/slime"
+      },
+      "particle_effects": {
+      
+         "invisible": "invisible",
+         "status_setup": "status_setup",
+         "health_setup": "health_setup",
+         "hostile_warnings": "hostile_warnings",
+         "pos": "pos",
+         "pos_egg": "pos_slime"
+      },
+      "sound_effects": {"inception_horn": "inception_horn", "inception_horn_loud": "inception_horn_loud", "mob_sound": "loud_mob.slime.big"},
+      
+      "geometry": {
+        "default": "geometry.slime",
+        "armor": "geometry.slime.armor",
+        "target": "geometry.target_rotate_-5",
+        "block": "geometry.block_-5"
+      },
+      "animations": {
+        "target_rotate": "animation.target_rotate",
+		"camera_rotate": "animation.camera_rotate"
+      },
+      "animation_controllers": [
+        { "1": "controller.animation.target_rotate_setup" }, 
+ 		{ "1.1": "controller.animation.camera_rotate_setup" },
+        { "2": "controller.animation.invisible" },
+        { "3": "controller.animation.status" },
+        { "4": "controller.animation.numbers" },
+        { "5": "controller.animation.hostile_warnings" },
+        { "6": "controller.animation.pos" }
+      ],
+      "scripts": {
+        "pre_animation": [
+          "variable.squish_factor = (query.previous_squish_value + (query.current_squish_value - query.previous_squish_value) * query.frame_alpha);",
+          "variable.bounce = 1 / ((variable.squish_factor / (query.variant * 0.5 + 1)) + 1);",
+          "variable.horizontal_scale_amount = variable.bounce * query.variant;",
+          "variable.vertical_scale_amount = (1 / variable.bounce) * query.variant;"
+        ],
+        "scaleX": "variable.horizontal_scale_amount",
+        "scaleY": "variable.vertical_scale_amount",
+        "scaleZ": "variable.horizontal_scale_amount"
+      },
+      "render_controllers": [
+        "controller.render.target_rotate",
+        "controller.render.block",
+        "controller.render.slime",
+        "controller.render.slime_armor"
+      ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 10
+      }
+    }
+  }
+}

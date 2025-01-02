@@ -1,0 +1,18 @@
+//This JSON was modified by AgentMindStorm (@agentms_). Please do not use this document without permission.
+{
+  "format_version" : "1.10.0",
+  "animation_controllers" : {
+    "controller.animation.villager_v2.item_pose": {
+      "initial_state": "third_person",
+      "states": {
+        "third_person": {
+          "animations": [
+            "item_pose.flat",
+            { "item_pose.block": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:banner', 'minecraft:blue_ice', 'minecraft:bookshelf', 'minecraft:cactus', 'minecraft:carpet', 'minecraft:coral_block', 'minecraft:dripstone_block', 'minecraft:glass_pane', 'minecraft:glowstone', 'minecraft:hardened_clay', 'minecraft:moss_block', 'minecraft:packed_ice', 'minecraft:podzol', 'minecraft:pumpkin', 'minecraft:quartz_block', 'minecraft:dirt_with_roots', 'minecraft:sand', 'minecraft:small_dripleaf_block', 'minecraft:stained_hardened_clay', 'minecraft:stone', 'minecraft:stonebrick', 'minecraft:wool', 'minecraft:black_glazed_terracotta', 'minecraft:blue_glazed_terracotta', 'minecraft:brown_glazed_terracotta', 'minecraft:cyan_glazed_terracotta', 'minecraft:gray_glazed_terracotta', 'minecraft:green_glazed_terracotta', 'minecraft:light_blue_glazed_terracotta', 'minecraft:lime_glazed_terracotta', 'minecraft:magenta_glazed_terracotta', 'minecraft:orange_glazed_terracotta', 'minecraft:pink_glazed_terracotta', 'minecraft:purple_glazed_terracotta', 'minecraft:red_glazed_terracotta', 'minecraft:silver_glazed_terracotta', 'minecraft:white_glazed_terracotta', 'minecraft:yellow_glazed_terracotta')" },
+            { "item_pose.placeable_flat": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:bell', 'minecraft:brown_mushroom', 'minecraft:double_plant', 'minecraft:lantern', 'minecraft:mangrove_propagule', 'minecraft:pointed_dripstone', 'minecraft:red_flower', 'minecraft:red_mushroom', 'minecraft:sapling', 'minecraft:sea_pickle', 'minecraft:tallgrass', 'minecraft:vine', 'minecraft:waterlily', 'minecraft:yellow_flower')" }
+          ]
+        }
+      }
+    }
+  }
+}

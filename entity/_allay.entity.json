@@ -1,0 +1,71 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "minecraft:allay",
+			"materials": {
+				"default": "allay"
+			},
+			"textures": {
+				"default": "textures/entity/allay/allay"
+			},
+			"geometry": {
+				"default": "geometry.allay",
+        "target": "geometry.target_rotate_5",
+        "block": "geometry.block_5"
+			},
+      "spawn_egg": {
+        "base_color": "#00daff",
+        "overlay_color": "#00adff"
+      },
+      "particle_effects": {
+      
+         "invisible": "invisible",
+         "status_setup": "status_setup",
+         "health_setup": "health_setup",
+         "hostile_warnings": "hostile_warnings",
+         "pos": "pos",
+         "pos_egg": "pos_allay"
+      },
+      "sound_effects": {"inception_horn": "inception_horn", "inception_horn_loud": "inception_horn_loud", "mob_sound": ""},
+      
+      "scripts": {
+        "pre_animation": [
+          "variable.holding_trident = query.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident');"
+        ]
+      },
+			"animations": {
+				"target_rotate": "animation.target_rotate", 
+				"camera_rotate": "animation.camera_rotate",
+				"idle": "animation.allay.idle",
+				"fly": "animation.allay.fly",
+				"hold_item": "animation.allay.hold_item",
+				"hold_item_fly": "animation.allay.hold_item_fly",
+				"look_at_target_default": "animation.allay.look_at_target.default",
+				"dance": "animation.allay.dance"
+			},
+			"animation_controllers": [
+				{ "1": "controller.animation.target_rotate_setup" },
+				{ "1.1": "controller.animation.camera_rotate_setup" },
+				{ "2": "controller.animation.invisible" },
+				{ "3": "controller.animation.status" },
+				{ "4": "controller.animation.numbers" },
+				{ "5": "controller.animation.hostile_warnings" },
+				{ "6": "controller.animation.pos" }, 
+				
+                { "general": "controller.animation.allay.general" },
+				{ "look_at_target": "controller.animation.allay.look_at_target" },
+				{ "holding": "controller.animation.allay.holding" },
+				{ "dancing": "controller.animation.allay.dancing" }
+			],
+      "render_controllers": [ 
+         "controller.render.target_rotate",
+         "controller.render.block",
+         "controller.render.allay" 
+      ],
+      "enable_attachables":  true,
+      "held_item_ignores_lighting": true
+
+		}
+	}
+}

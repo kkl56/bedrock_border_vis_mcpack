@@ -1,0 +1,46 @@
+//This JSON was modified by AgentMindStorm (@agentms_). Please do not use this document without permission.
+{
+  "format_version" : "1.10.0",
+  "animation_controllers": {
+    "controller.animation.pillager.attack": {
+      "initial_state": "default",
+      "states": {
+        "charge": {
+          "animations": [ "crossbow_charge" ],
+          "transitions": [
+            {
+              "default": "variable.attack_state == 0"
+            },
+            {
+              "hold": "variable.attack_state == 1"
+            }
+          ]
+        },
+        "default": {
+          "animations": [
+            { "crossbow_hold": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:crossbow')" }
+          ],
+          "transitions": [
+            {
+              "hold": "variable.attack_state == 1"
+            },
+            {
+              "charge": "variable.attack_state == 2"
+            }
+          ]
+        },
+        "hold": {
+          "animations": [ "crossbow_hold" ],
+          "transitions": [
+            {
+              "default": "variable.attack_state == 0"
+            },
+            {
+              "charge": "variable.attack_state == 2"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

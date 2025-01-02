@@ -1,0 +1,16 @@
+//This JSON was modified by AgentMindStorm (@agentms_). Please do not use this document without permission.
+{
+  "format_version" : "1.10.0",
+  "animation_controllers" : {
+    "controller.animation.vex.item_pose": {
+      "initial_state": "third_person",
+      "states": {
+        "third_person": {
+          "animations": [
+            "item_pose"
+          ]
+        }
+      }
+    }
+  }
+}

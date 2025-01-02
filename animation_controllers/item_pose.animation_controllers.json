@@ -1,0 +1,142 @@
+//This JSON was modified by AgentMindStorm (@agentms_). Please do not use this document without permission.
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.item_pose": {
+      "initial_state": "third_person",
+      "states": {
+        "third_person": {
+          "animations": [
+            { "perpendicular.left": "!q.is_item_name_any('slot.weapon.offhand', 'minecraft:spyglass', 'minecraft:trident', 'minecraft:shield', 'minecraft:bow')" },
+            { "perpendicular.right": "!q.is_item_name_any('slot.weapon.mainhand', 'minecraft:spyglass', 'minecraft:trident', 'minecraft:shield', 'minecraft:bow')" },
+            { "banner.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:banner')" },
+            { "banner.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:banner')" },
+            { "crossbow.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:crossbow')" },
+            { "crossbow.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:crossbow')" },
+            { "fishing_rod.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:carrot_on_a_stick', 'minecraft:fishing_rod', 'minecraft:warped_fungus_on_a_stick')" },
+            { "fishing_rod.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:carrot_on_a_stick', 'minecraft:fishing_rod', 'minecraft:warped_fungus_on_a_stick')" },
+            { "goat_horn.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:goat_horn')" },
+            { "pointed_dripstone.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:pointed_dripstone')" },
+            { "pointed_dripstone.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:pointed_dripstone')" },
+            { "totem_of_undying.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:totem_of_undying')" },
+            { "trident.item": "(q.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident') && q.has_target)" }
+            //Spyglass, trident, bow, and shield held item positions are controlled in "spyglass.animation.json", "trident.animation.json", "bow.animation.json", and "shield.animation.json".
+            //The "trident.item" pose keeps the trident right-side-up when its owner has a target.
+          ]
+        }
+      }
+    },
+    "controller.animation.item_pose.arm": {
+      "initial_state": "third_person",
+      "states": {
+        "third_person": {
+          "animations": [
+            { "perpendicular.left": "!q.is_item_name_any('slot.weapon.offhand', 'minecraft:spyglass', 'minecraft:trident', 'minecraft:shield', 'minecraft:bow')" },
+            { "perpendicular.right": "!q.is_item_name_any('slot.weapon.mainhand', 'minecraft:spyglass', 'minecraft:trident', 'minecraft:shield', 'minecraft:bow')" },
+            { "banner.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:banner')" },
+            { "banner.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:banner')" },
+            { "crossbow.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:crossbow')" },
+            { "crossbow.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:crossbow')" },
+            { "fishing_rod.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:carrot_on_a_stick', 'minecraft:fishing_rod', 'minecraft:warped_fungus_on_a_stick')" },
+            { "fishing_rod.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:carrot_on_a_stick', 'minecraft:fishing_rod', 'minecraft:warped_fungus_on_a_stick')" },
+            { "goat_horn.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:goat_horn')" },
+            { "pointed_dripstone.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:pointed_dripstone')" },
+            { "pointed_dripstone.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:pointed_dripstone')" },
+            { "totem_of_undying.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:totem_of_undying')" },
+            { "trident.arm": "(q.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident') && q.has_target)" },
+            { "trident.item": "(q.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident') && q.has_target)" }
+          ]
+        }
+      }
+    },
+    "controller.animation.item_pose.player": { //This animation controller is actually unused, but it's good for testing player item poses. It's unused in the final pack to avoid needing "player.entity.json".
+      "initial_state": "first_person",
+      "states": {
+        "first_person": {
+          "transitions": [
+            {
+              "third_person": "!variable.is_first_person"
+            }
+          ]
+        },
+        "third_person": {
+          "animations": [
+            { "perpendicular.left": "!q.is_item_name_any('slot.weapon.offhand', 'minecraft:spyglass', 'minecraft:trident', 'minecraft:shield', 'minecraft:bow')" },
+            { "perpendicular.right": "!q.is_item_name_any('slot.weapon.mainhand', 'minecraft:spyglass', 'minecraft:trident', 'minecraft:shield', 'minecraft:bow')" },
+            { "banner.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:banner')" },
+            { "banner.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:banner')" },
+            { "crossbow.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:crossbow')" },
+            { "crossbow.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:crossbow')" },
+            { "fishing_rod.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:carrot_on_a_stick', 'minecraft:fishing_rod', 'minecraft:warped_fungus_on_a_stick')" },
+            { "fishing_rod.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:carrot_on_a_stick', 'minecraft:fishing_rod', 'minecraft:warped_fungus_on_a_stick')" },
+            { "goat_horn.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:goat_horn')" },
+            { "pointed_dripstone.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:pointed_dripstone')" },
+            { "pointed_dripstone.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:pointed_dripstone')" },
+            { "totem_of_undying.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:totem_of_undying')" }
+          ],
+          "transitions": [
+            {
+              "first_person": "variable.is_first_person"
+            }
+          ]
+        }
+      }
+    },
+    "controller.animation.item_pose.drowned": {
+      "initial_state": "third_person",
+      "states": {
+        "third_person": {
+          "animations": [
+            { "perpendicular.left": "!q.is_item_name_any('slot.weapon.offhand', 'minecraft:spyglass', 'minecraft:trident', 'minecraft:shield', 'minecraft:bow')" },
+            { "perpendicular.right": "!q.is_item_name_any('slot.weapon.mainhand', 'minecraft:spyglass', 'minecraft:trident', 'minecraft:shield', 'minecraft:bow')" },
+            { "banner.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:banner')" },
+            { "banner.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:banner')" },
+            { "crossbow.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:crossbow')" },
+            { "crossbow.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:crossbow')" },
+            { "fishing_rod.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:carrot_on_a_stick', 'minecraft:fishing_rod', 'minecraft:warped_fungus_on_a_stick')" },
+            { "fishing_rod.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:carrot_on_a_stick', 'minecraft:fishing_rod', 'minecraft:warped_fungus_on_a_stick')" },
+            { "goat_horn.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:goat_horn')" },
+            { "pointed_dripstone.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:pointed_dripstone')" },
+            { "pointed_dripstone.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:pointed_dripstone')" },
+            { "totem_of_undying.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:totem_of_undying')" }
+          ]
+        }
+      }
+    },
+    "controller.animation.item_pose.vindicator": {
+      "initial_state": "hidden",
+      "states": {
+        "hidden": {
+          "animations": [ "invisible.left", "invisible.right" ],
+          "transitions": [
+            {
+              "visible": "q.is_angry"
+            }
+          ]
+        },
+        "visible": {
+          "animations": [
+            { "perpendicular.left": "!q.is_item_name_any('slot.weapon.offhand', 'minecraft:spyglass', 'minecraft:trident', 'minecraft:shield', 'minecraft:bow')" },
+            { "perpendicular.right": "!q.is_item_name_any('slot.weapon.mainhand', 'minecraft:spyglass', 'minecraft:trident', 'minecraft:shield', 'minecraft:bow')" },
+            { "banner.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:banner')" },
+            { "banner.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:banner')" },
+            { "crossbow.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:crossbow')" },
+            { "crossbow.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:crossbow')" },
+            { "fishing_rod.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:carrot_on_a_stick', 'minecraft:fishing_rod', 'minecraft:warped_fungus_on_a_stick')" },
+            { "fishing_rod.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:carrot_on_a_stick', 'minecraft:fishing_rod', 'minecraft:warped_fungus_on_a_stick')" },
+            { "goat_horn.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:goat_horn')" },
+            { "pointed_dripstone.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:pointed_dripstone')" },
+            { "pointed_dripstone.right": "q.is_item_name_any('slot.weapon.mainhand', 'minecraft:pointed_dripstone')" },
+            { "totem_of_undying.left": "q.is_item_name_any('slot.weapon.offhand', 'minecraft:totem_of_undying')" },
+            { "trident.item": "(q.is_item_name_any('slot.weapon.mainhand', 'minecraft:trident') && q.has_target)" }
+          ],
+          "transitions": [
+            {
+              "hidden": "!q.is_angry"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

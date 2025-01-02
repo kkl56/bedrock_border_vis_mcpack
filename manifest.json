@@ -1,0 +1,18 @@
+{
+    "format_version": 2,
+    "header": {
+        "description": "§l§2这是由bibi北极星整合，目的是帮助你更好游玩生存！",
+        "name": "§e§l生存辅助&细节优化§61.0",
+        "uuid": "1d987b5e-07bc-dfdb-1214-eed9cd501da4",
+        "version": [1, 0, 0],
+        "min_engine_version": [1, 13, 0]
+    },
+    "modules": [
+        {
+            "description": "这是一款可以帮助你更好游玩生存的材质",
+            "type": "resources",
+            "uuid": "53644fac-a276-42e5-843f-a3c6f169a9ab",
+            "version": [0, 0, 1]
+        }
+    ]
+}

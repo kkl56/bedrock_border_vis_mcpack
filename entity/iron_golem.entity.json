@@ -1,0 +1,75 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:iron_golem",
+      "materials": { "default": "iron_golem" },
+      "textures": {
+        "default": "textures/entity/iron_golem",
+        "cracked_high": "textures/entity/iron_golem/cracked_high",
+        "cracked_med": "textures/entity/iron_golem/cracked_medium",
+        "cracked_low": "textures/entity/iron_golem/cracked_low",
+        "cracked_none": "textures/entity/iron_golem/cracked_none"
+      },
+      "geometry": {
+        "default": "geometry.irongolem",
+        "target": "geometry.target_rotate_39",
+        "block": "geometry.block_39"
+      },
+      "animations": {
+        "invisible": "controller.animation.invisible",
+        "status": "controller.animation.status",
+        "numbers": "controller.animation.numbers",
+        "target_rotate": "animation.target_rotate", 
+        "camera_rotate": "animation.camera_rotate",
+        "hostile_warnings": "controller.animation.hostile_warnings",
+        "pos": "controller.animation.pos",
+        
+        "walk": "animation.iron_golem.walk",
+        "move": "animation.iron_golem.move",
+        "walk_to_target": "animation.iron_golem.walk_to_target",
+        "move_to_target": "animation.iron_golem.move_to_target",
+        "attack": "animation.iron_golem.attack",
+        "flower": "animation.iron_golem.flower",
+        "look_at_target": "animation.common.look_at_target",
+        "move_controller": "controller.animation.iron_golem.move",
+        "arm_controller": "controller.animation.iron_golem.arm_movement"
+      },
+      "particle_effects": {
+      
+         "invisible": "invisible",
+         "status_setup": "status_setup",
+         "health_setup": "health_setup",
+         "hostile_warnings": "hostile_warnings",
+         "pos": "pos",
+         "pos_egg": "pos_iron_golem"
+      },
+      "sound_effects": {"inception_horn": "inception_horn", "inception_horn_loud": "inception_horn_loud", "mob_sound": "loud_mob.irongolem.hit"},
+      
+      "scripts": {
+        "pre_animation": [
+          "variable.modified_tcos0 = Math.clamp(((Math.cos(query.modified_distance_moved * 13.5) * Math.min(query.modified_move_speed, 0.6) / variable.gliding_speed_value) * 25.0), -12.5, 12.5);"
+        ],
+        "animate": [
+          "look_at_target",
+          "move_controller",
+          "arm_controller",
+          
+          "target_rotate", 
+		  "camera_rotate",
+          "hostile_warnings",
+          "invisible",
+          "status",
+          "numbers",
+          "pos"
+        ]
+      },
+      "render_controllers": [ 
+        "controller.render.target_rotate",
+        "controller.render.block",
+        "controller.render.iron_golem",
+        "controller.render.iron_golem_cracks"
+      ]
+    }
+  }
+}

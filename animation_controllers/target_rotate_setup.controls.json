@@ -1,0 +1,10 @@
+{
+	"format_version" : "1.10.0",
+	"animation_controllers" : {
+		"controller.animation.target_rotate_setup" : {
+			"initial_state" : "default",
+			"states" : {"default" : {"animations" : [ "target_rotate" ]}}
+		}
+	}
+}
+//this is for projectile mob guides

@@ -1,0 +1,67 @@
+{
+	"format_version": "1.8.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "minecraft:frog",
+			"materials": { "default": "frog" },
+			"textures": {
+				"temperate": "textures/entity/frog/temperate_frog",
+				"cold": "textures/entity/frog/cold_frog",
+				"warm": "textures/entity/frog/warm_frog"
+			},
+			"geometry": {
+				"default": "geometry.frog",
+        "target": "geometry.target_rotate_5",
+        "block": "geometry.block_5"
+			},
+			"spawn_egg": {
+				"base_color": "#d07444",
+				"overlay_color": "#ffc77c"
+			},
+			"scripts": {
+				"pre_animation": [
+					"variable.moving = query.ground_speed > 0 || query.vertical_speed > 0;"
+				]
+			},
+			"particle_effects": {
+      
+         "invisible": "invisible",
+         "status_setup": "status_setup",
+         "health_setup": "health_setup",
+         "hostile_warnings": "hostile_warnings",
+         "pos": "pos",
+         "pos_egg": "pos_frog"
+      },
+      "sound_effects": {"inception_horn": "inception_horn", "inception_horn_loud": "inception_horn_loud", "mob_sound": "loud_mob.frog.ambient"},
+      
+			"animations": {
+				"target_rotate": "animation.target_rotate", 
+        "camera_rotate": "animation.camera_rotate",
+                "croak": "animation.frog.croak",
+				"jump": "animation.frog.jump",
+				"tongue": "animation.frog.tongue",
+				"walk": "animation.frog.walk",
+				"swim": "animation.frog.swim",
+				"idle_water": "animation.frog.idle.water",
+				"look_at_target": "animation.common.look_at_target"
+			},
+			"animation_controllers": [
+				{ "1": "controller.animation.target_rotate_setup" },
+				{ "1.1": "controller.animation.camera_rotate_setup" },
+				{ "2": "controller.animation.invisible" },
+				{ "3": "controller.animation.status" },
+				{ "4": "controller.animation.numbers" },
+				{ "5": "controller.animation.hostile_warnings" },
+				{ "6": "controller.animation.pos" }, 
+                { "general": "controller.animation.frog.general" },
+				{ "croaking": "controller.animation.frog.croaking" },
+				{ "eat_mob": "controller.animation.frog.eat_mob" }
+			],
+			"render_controllers": [ 
+               "controller.render.target_rotate",
+               "controller.render.block",
+               "controller.render.frog" 
+            ]
+		}
+	}
+}

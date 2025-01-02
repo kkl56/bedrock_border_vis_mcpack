@@ -1,0 +1,60 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:spider",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "spider",
+        "invisible": "spider_invisible"
+      },
+      "textures": {
+        "default": "textures/entity/spider/spider"
+      },
+      "geometry": {
+        "default": "geometry.spider.v1.8",
+        "target": "geometry.target_rotate_5",
+        "block": "geometry.block_10"
+      },
+      "particle_effects": {
+      
+         "invisible": "invisible",
+         "status_setup": "status_setup",
+         "health_setup": "health_setup",
+         "hostile_warnings": "hostile_warnings",
+         "pos": "pos",
+         "pos_egg": "pos_spider"
+      },
+      "sound_effects": {"inception_horn": "inception_horn", "inception_horn_loud": "inception_horn_loud", "mob_sound": "loud_mob.spider.say"},
+      
+      "animations": {
+        "target_rotate": "animation.target_rotate", 
+        "camera_rotate": "animation.camera_rotate",
+        
+        "default_leg_pose": "animation.spider.default_leg_pose",
+        "look_at_target": "animation.spider.look_at_target",
+        "walk": "animation.spider.walk"
+      },
+      "animation_controllers": [
+        { "1": "controller.animation.target_rotate_setup" }, 
+ 		{ "1.1": "controller.animation.camera_rotate_setup" },
+		{ "2": "controller.animation.invisible" },
+        { "3": "controller.animation.status" },
+        { "4": "controller.animation.numbers" },
+        { "5": "controller.animation.hostile_warnings" },
+        { "6": "controller.animation.pos" },
+        
+        { "move": "controller.animation.spider.move" }
+      ],
+      "render_controllers": [ 
+        "controller.render.target_rotate",
+        "controller.render.block",
+        "controller.render.spider"
+      ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 11
+      }
+    }
+  }
+}

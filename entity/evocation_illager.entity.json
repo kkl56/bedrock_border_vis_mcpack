@@ -1,0 +1,73 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:evocation_illager",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "evoker"
+      },
+      "textures": {
+        "default": "textures/entity/illager/evoker"
+      },
+      "geometry": {
+        "default": "geometry.evoker.v1.8",
+        "target": "geometry.target_rotate_28",
+        "block": "geometry.block_28"
+      },
+      "scripts": {
+        "scale": "0.9375",
+        "animate": [
+          "controller_general",
+          "controller_move",
+          
+          "target_rotate", 
+		  "camera_rotate",
+          "hostile_warnings",
+          "invisible",
+          "status",
+          "numbers",
+          "pos"
+        ]
+      },
+      "particle_effects": {
+         "spell": "minecraft:evoker_spell",
+         
+         "invisible": "invisible",
+         "status_setup": "status_setup",
+         "health_setup": "health_setup",
+         "hostile_warnings": "hostile_warnings",
+         "pos": "pos",
+         "pos_egg": "pos_evoker"
+      },
+      "sound_effects": {"inception_horn": "inception_horn", "inception_horn_loud": "inception_horn_loud", "mob_sound": "loud_mob.evocation_illager.ambient"},
+      
+      "animations": {
+        "invisible": "controller.animation.invisible",
+        "status": "controller.animation.status",
+        "numbers": "controller.animation.numbers",
+        "target_rotate": "animation.target_rotate", 
+        "camera_rotate": "animation.camera_rotate",
+        "hostile_warnings": "controller.animation.hostile_warnings",
+        "pos": "controller.animation.pos",
+        
+        "general": "animation.evoker.general",
+        "casting": "animation.evoker.casting",
+        "look_at_target": "animation.common.look_at_target",
+        "move": "animation.villager.move",
+        "celebrating": "animation.humanoid.celebrating",
+        "controller_general": "controller.animation.evoker.general",
+        "controller_move": "controller.animation.villager.move"
+      },
+      "render_controllers": [ 
+         "controller.render.target_rotate",
+         "controller.render.block",
+         "controller.render.evoker" 
+      ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 40
+      }
+    }
+  }
+}

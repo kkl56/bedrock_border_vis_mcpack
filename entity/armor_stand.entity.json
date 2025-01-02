@@ -1,0 +1,81 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:armor_stand",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "armor_stand"
+      },
+      "textures": {
+        "default": "textures/entity/armor_stand"
+      },
+      "particle_effects": {
+		"distance_setup": "distance_setup",
+		"border_setup":"border_setup",
+		
+        "invisible": "invisible",
+        "status_setup": "status_setup",
+        "health_setup": "health_setup",
+        "hostile_warnings": "hostile_warnings"
+      },
+      
+      "animations": {
+        "invisible": "controller.animation.invisible",
+        "status": "controller.animation.status",
+        "numbers": "controller.animation.numbers",
+        "target_rotate": "animation.target_rotate", 
+        "camera_rotate": "animation.camera_rotate",
+        "hostile_warnings": "controller.animation.hostile_warnings",
+		"distance_armor_stand": "controller.animation.distance_armor_stand",
+        "border": "controller.animation.border",
+		
+        "default_pose": "animation.armor_stand.default_pose",
+        "no_pose": "animation.armor_stand.no_pose",
+        "solemn_pose": "animation.armor_stand.solemn_pose",
+        "athena_pose": "animation.armor_stand.athena_pose",
+        "brandish_pose": "animation.armor_stand.brandish_pose",
+        "honor_pose": "animation.armor_stand.honor_pose",
+        "entertain_pose": "animation.armor_stand.entertain_pose",
+        "salute_pose": "animation.armor_stand.salute_pose",
+        "riposte_pose": "animation.armor_stand.riposte_pose",
+        "zombie_pose": "animation.armor_stand.zombie_pose",
+        "cancan_a_pose": "animation.armor_stand.cancan_a_pose",
+        "cancan_b_pose": "animation.armor_stand.cancan_b_pose",
+        "hero_pose": "animation.armor_stand.hero_pose",
+        "wiggle": "animation.armor_stand.wiggle",
+        "controller.pose": "controller.animation.armor_stand.pose",
+        "controller.wiggling": "controller.animation.armor_stand.wiggle"
+      },
+      "scripts": {
+        "initialize": [
+          "variable.armor_stand.pose_index = 0;",
+          "variable.armor_stand.hurt_time = 0;"
+        ],
+        "animate": [
+          "controller.pose",
+          "controller.wiggling",
+          
+          "target_rotate", 
+		  "camera_rotate",
+          "hostile_warnings",
+          "invisible",
+          "status",
+          "numbers",
+		  "distance_armor_stand",
+          "border"
+        ]
+      },
+      "geometry": {
+        "default": "geometry.armor_stand",
+        "target": "geometry.target_rotate_28",
+        "block": "geometry.block_28"
+      },
+      "render_controllers": [
+        "controller.render.target_rotate",
+        "controller.render.block",
+        "controller.render.armor_stand" ],
+      "enable_attachables": true
+    }
+  }
+}

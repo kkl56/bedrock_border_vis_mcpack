@@ -1,0 +1,66 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:witch",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "witch"
+      },
+      "textures": {
+        "default": "textures/entity/witch"
+      },
+      "geometry": {
+        "default": "geometry.villager.witch.v1.8",
+        "target": "geometry.target_rotate_32",
+        "block": "geometry.block_32"
+      },
+      "scripts": {
+        "scale": "0.9375"
+      },
+      "particle_effects": {
+      
+         "invisible": "invisible",
+         "status_setup": "status_setup",
+         "health_setup": "health_setup",
+         "hostile_warnings": "hostile_warnings",
+         "pos": "pos",
+         "pos_egg": "pos_witch",
+         "guide_mobs_setup": "guide_mobs_setup"
+      },
+      "sound_effects": {"inception_horn": "inception_horn", "inception_horn_loud": "inception_horn_loud", "mob_sound": "loud_mob.witch.ambient"},
+      
+      "animations": {
+        "target_rotate": "animation.target_rotate", 
+        "camera_rotate": "animation.camera_rotate",
+        
+        "villager_general": "animation.villager.general",
+        "look_at_target": "animation.common.look_at_target",
+        "move": "animation.villager.move",
+        "general": "animation.witch.general"
+      },
+      "animation_controllers": [
+        { "1": "controller.animation.target_rotate_setup" }, 
+ 		{ "1.1": "controller.animation.camera_rotate_setup" },
+        { "2": "controller.animation.invisible" },
+        { "3": "controller.animation.status" },
+        { "4": "controller.animation.numbers" },
+        { "5": "controller.animation.hostile_warnings" },
+        { "6": "controller.animation.pos" },
+        { "7": "controller.animation.guide_mobs" },
+        
+        { "general": "controller.animation.witch.general" },
+        { "move": "controller.animation.villager.move" }
+      ],
+      "render_controllers": [ 
+        "controller.render.target_rotate",
+        "controller.render.block",
+        "controller.render.witch" 
+      ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 17
+      }
+    }
+  }
+}

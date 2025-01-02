@@ -1,0 +1,13 @@
+{
+	"format_version" : "1.8.0",
+	"animations" : {
+		"animation.camera_rotate" : {
+			"loop" : true,
+			"bones" : {
+				"block" : {
+					"rotation": [ "query.camera_rotation(0)", "query.camera_rotation(1) - query.body_y_rotation", 0.0 ]
+				}
+			}
+		}
+	}
+}

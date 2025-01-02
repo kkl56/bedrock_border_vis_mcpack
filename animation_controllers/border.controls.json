@@ -1,0 +1,21 @@
+{
+   "format_version":"1.10.0",
+   "animation_controllers":{
+      "controller.animation.border":{
+         "initial_state":"off_auto",
+         "states":{
+            "on":{
+               "on_entry": ["v.borders = query.life_time;"],
+               "transitions":[{"off_auto":"query.life_time - v.borders >= 0.5"}],
+               "particle_effects":[
+                  {"effect":"border_setup"}
+               ]
+            },
+            "off_auto":{
+               "transitions":[{"on":"query.is_item_name_any('slot.weapon.mainhand', 0, 'minecraft:arrow') || query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:arrow') || query.is_item_name_any('slot.weapon.offhand', 0, 'minecraft:firework_rocket')
+"}]
+            }
+         }
+      }
+   }
+}

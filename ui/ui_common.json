@@ -1,0 +1,6 @@
+/*
+*
+* THIS JSON WAS MODIFIED BY ambient#2309. DO NOT REUSE OR REDISTRIBUTE PUBLICLY WITHOUT PERMISSION!
+*
+*/
+{"item_renderer":{"modifications":[{"array_name":"bindings","operation":"remove","where":{"binding_name":"#item_pickup_time"}}]},"flying_item_renderer":{"ignored":true},"highlight_slot_panel/white_border":{"ignored":true}}

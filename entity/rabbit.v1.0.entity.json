@@ -1,0 +1,63 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:rabbit",
+      "materials": { "default": "rabbit" },
+      "textures": {
+        "brown": "textures/entity/rabbit/brown",
+        "white": "textures/entity/rabbit/white",
+        "black": "textures/entity/rabbit/blackrabbit",
+        "white_splotched": "textures/entity/rabbit/white_splotched",
+        "gold": "textures/entity/rabbit/gold",
+        "salt": "textures/entity/rabbit/salt",
+        "toast": "textures/entity/rabbit/toast"
+      },
+      "geometry": {
+        "default": "geometry.rabbit",
+        "target": "geometry.target_rotate_16",
+        "block": "geometry.block_16"
+      },
+      "particle_effects": {
+      
+         "invisible": "invisible",
+         "status_setup": "status_setup",
+         "health_setup": "health_setup",
+         "hostile_warnings": "hostile_warnings",
+         "pos": "pos",
+         "pos_egg": "pos_rabbit"
+      },
+      "sound_effects": {"inception_horn": "inception_horn", "inception_horn_loud": "inception_horn_loud", "mob_sound": ""},
+      
+      "animations": {
+        "target_rotate": "animation.target_rotate", 
+        "camera_rotate": "animation.camera_rotate",
+        
+        "move": "animation.rabbit.move",
+        "baby_transform": "animation.rabbit.baby_transform",
+        "look_at_target": "animation.common.look_at_target"
+      },
+      "animation_controllers": [
+        { "1": "controller.animation.target_rotate_setup" }, 
+ 		{ "1.1": "controller.animation.camera_rotate_setup" },
+        { "2": "controller.animation.invisible" },
+        { "3": "controller.animation.status" },
+        { "4": "controller.animation.numbers" },
+        { "5": "controller.animation.hostile_warnings" },
+        { "6": "controller.animation.pos" },
+        
+        { "general": "controller.animation.rabbit.general" },
+        { "baby": "controller.animation.rabbit.baby" }
+      ],
+      "render_controllers": [ 
+        "controller.render.target_rotate",
+        "controller.render.block",
+        "controller.render.rabbit" 
+      ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 24
+      }
+    }
+  }
+}

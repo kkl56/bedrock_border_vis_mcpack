@@ -1,0 +1,78 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "minecraft:phantom",
+			"materials": {
+				"default": "phantom",
+				"invisible": "phantom_invisible"
+			},
+			"textures": {
+				"default": "textures/entity/phantom"
+			},
+			"geometry": {
+				"default": "geometry.phantom",
+        "target": "geometry.target_rotate_5",
+        "block": "geometry.block_5"
+			},
+			"scripts": {
+				"initialize": [
+					"variable.runtimeid = 0;",
+					"variable.tailrotx = -5.0;",
+					"variable.wingrotz = 0.0;"
+				],
+				"animate": [
+          "target_rotate", 
+		  "camera_rotate",
+          "hostile_warnings",
+          "invisible",
+          "status",
+          "numbers",
+          "pos",
+          
+          "phantom_base_pose_controller",
+					"move"
+				]
+			},
+      "particle_effects": {
+         "wing_dust": "minecraft:phantom_trail_particle",
+         
+         "invisible": "invisible",
+         "status_setup": "status_setup",
+         "health_setup": "health_setup",
+         "hostile_warnings": "hostile_warnings",
+         "pos": "pos",
+         "pos_egg": "pos_phantom"
+      },
+      "sound_effects": {
+        "inception_horn": "inception_horn",
+        "inception_horn_loud": "inception_horn_loud",
+        "flap": "mob.phantom.flap",
+        "mob_sound": "loud_mob.phantom.idle"
+      },
+      
+			"animations": {
+        "invisible": "controller.animation.invisible",
+        "status": "controller.animation.status",
+        "numbers": "controller.animation.numbers",
+        "target_rotate": "animation.target_rotate", 
+        "camera_rotate": "animation.camera_rotate",
+        "hostile_warnings": "controller.animation.hostile_warnings",
+        "pos": "controller.animation.pos",
+        
+                "phantom_base_pose": "animation.phantom.base_pose",
+				"phantom_base_pose_controller": "controller.animation.phantom.base_pose",
+				"move": "animation.phantom.move"
+			},
+			"render_controllers": [ 
+			  "controller.render.target_rotate",
+        "controller.render.block",
+        "controller.render.phantom" 
+			],
+			"spawn_egg": {
+				"texture": "spawn_egg",
+				"texture_index": 51
+			}
+		}
+	}
+}

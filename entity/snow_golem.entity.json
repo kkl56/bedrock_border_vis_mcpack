@@ -1,0 +1,57 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:snow_golem",
+      "min_engine_version": "1.8.0",
+      "materials": {
+        "default": "snow_golem",
+        "head": "snow_golem_pumpkin"
+      },
+      "textures": {
+        "default": "textures/entity/snow_golem"
+      },
+      "geometry": {
+        "default": "geometry.snowgolem.v1.8",
+        "target": "geometry.target_rotate_28",
+        "block": "geometry.block_28"
+      },
+      "particle_effects": {
+      
+         "invisible": "invisible",
+         "status_setup": "status_setup",
+         "health_setup": "health_setup",
+         "hostile_warnings": "hostile_warnings",
+         "pos": "pos",
+         "pos_egg": "pos_snow_golem",
+         "guide_mobs_setup": "guide_mobs_setup"
+      },
+      "sound_effects": {"inception_horn": "inception_horn", "inception_horn_loud": "inception_horn_loud", "mob_sound": "loud_mob.snowgolem.hurt"},
+      
+      "animations": {
+        "target_rotate": "animation.target_rotate", 
+        "camera_rotate": "animation.camera_rotate",
+        
+        "move": "animation.snowgolem.move.v1.8",
+        "look_at_target": "animation.common.look_at_target"
+      },
+      "animation_controllers": [
+        { "1": "controller.animation.target_rotate_setup" }, 
+ 		{ "1.1": "controller.animation.camera_rotate_setup" },
+        { "2": "controller.animation.invisible" },
+        { "3": "controller.animation.status" },
+        { "4": "controller.animation.numbers" },
+        { "5": "controller.animation.hostile_warnings" },
+        { "6": "controller.animation.pos" },
+        { "7": "controller.animation.guide_mobs" },
+        
+        { "move": "controller.animation.snowgolem.move.v1.8" }
+      ],
+      "render_controllers": [ 
+        "controller.render.target_rotate",
+        "controller.render.block",
+        "controller.render.snowgolem" 
+      ]
+    }
+  }
+}

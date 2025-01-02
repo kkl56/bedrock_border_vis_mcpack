@@ -1,0 +1,85 @@
+//This JSON was modified by Rainvay_ZCYF (@ZouChenyunfei) and AgentMindStorm (@agentms_). Please do not use this document without permission.
+{
+  "format_version" : "1.10.0",
+  "animation_controllers" : {
+    "controller.animation.drowned.attack.rotations" : {
+      "initial_state" : "chase_target",
+      "states" : {
+        "default" : {
+          "animations" : [ "zombie_attack_bare_hand" ],
+          "transitions" : [
+            {
+              "judge": "variable.has_target"
+            }
+          ]
+        },
+        "judge" : {
+          "animations" : [ "zombie_attack_bare_hand" ],
+          "transitions" : [
+            {
+              "rejudge": "variable.has_target"
+            },
+            {
+              "default" : "!variable.has_target"
+            }
+          ]
+        },
+        "rejudge" : {
+          "animations" : [ "zombie_attack_bare_hand" ],
+          "transitions" : [
+            {
+              "third_judge": "variable.has_target"
+            },
+            {
+              "default" : "!variable.has_target"
+            }
+          ]
+        },
+        "third_judge" : {
+          "animations" : [ "zombie_attack_bare_hand" ],
+          "transitions" : [
+            {
+              "chase_target": "variable.has_target"
+            },
+            {
+              "default" : "!variable.has_target"
+            },
+            {
+              "spear_attack" : "variable.is_brandishing_spear"
+            }
+          ]
+        },
+        "chase_target" : {
+          "animations" : [ "zombie_attack", "zombie_attack_bare_hand" ],
+          "transitions" : [
+            {
+              "default" : "!variable.has_target"
+            },
+            {
+              "spear_attack" : "variable.is_brandishing_spear"
+            }
+          ]
+        },
+        "one_hand_attack" : {
+          "animations" : [ "zombie_attack_bare_hand" ],
+          "transitions" : [
+            {
+              "default" : "!query.is_item_equipped('off_hand')"
+            },
+            {
+              "spear_attack" : "variable.is_brandishing_spear && !query.is_item_equipped('off_hand')"
+            }
+          ]
+        },
+        "spear_attack" : {
+          "animations" : [ "zombie_attack", "attack_rotations", "brandish_spear", "zombie_attack_bare_hand" ],
+          "transitions" : [
+            {
+              "default" : "!variable.is_brandishing_spear"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

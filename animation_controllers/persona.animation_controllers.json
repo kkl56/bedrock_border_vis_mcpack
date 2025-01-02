@@ -1,0 +1,19 @@
+//This JSON was modified by AgentMindStorm (@agentms_). Please do not use this document without permission.
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.persona.blink": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            { "open": "variable.is_blinking = 0; variable.last_blink_time = query.life_time; return variable.last_blink_time != 0;" }
+          ]
+        },
+        "open": {
+          "transitions": []
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:llama",
+      "materials": { "default": "llama" },
+      "textures": {
+        "creamy": "textures/entity/llama/llama_creamy",
+        "white": "textures/entity/llama/llama_white",
+        "brown": "textures/entity/llama/llama_brown",
+        "gray": "textures/entity/llama/llama_gray",
+        "decor_none": "textures/entity/llama/decor/decor_none",
+        "decor_white": "textures/entity/llama/decor/decor_white",
+        "decor_orange": "textures/entity/llama/decor/decor_orange",
+        "decor_magenta": "textures/entity/llama/decor/decor_magenta",
+        "decor_light_blue": "textures/entity/llama/decor/decor_light_blue",
+        "decor_yellow": "textures/entity/llama/decor/decor_yellow",
+        "decor_lime": "textures/entity/llama/decor/decor_lime",
+        "decor_pink": "textures/entity/llama/decor/decor_pink",
+        "decor_gray": "textures/entity/llama/decor/decor_gray",
+        "decor_silver": "textures/entity/llama/decor/decor_silver",
+        "decor_cyan": "textures/entity/llama/decor/decor_cyan",
+        "decor_purple": "textures/entity/llama/decor/decor_purple",
+        "decor_blue": "textures/entity/llama/decor/decor_blue",
+        "decor_brown": "textures/entity/llama/decor/decor_brown",
+        "decor_green": "textures/entity/llama/decor/decor_green",
+        "decor_red": "textures/entity/llama/decor/decor_red",
+        "decor_black": "textures/entity/llama/decor/decor_black",
+        "decor_wandering_trader": "textures/entity/llama/decor/trader_llama_decor"
+      },
+      "geometry": {
+        "default": "geometry.llama",
+        "target": "geometry.target_rotate_16",
+        "block": "geometry.block_16"
+      },
+      "particle_effects": {
+      
+         "invisible": "invisible",
+         "status_setup": "status_setup",
+         "health_setup": "health_setup",
+         "hostile_warnings": "hostile_warnings",
+         "pos": "pos",
+         "pos_egg": "pos_llama"
+      },
+      "sound_effects": {"inception_horn": "inception_horn", "inception_horn_loud": "inception_horn_loud", "mob_sound": "loud_mob.llama.idle"},
+      
+      "animations": {
+        "target_rotate": "animation.target_rotate", 
+        "camera_rotate": "animation.camera_rotate",
+        
+        "setup": "animation.llama.setup.v1.0",
+        "walk": "animation.quadruped.walk",
+        "look_at_target": "animation.common.look_at_target",
+        "baby_transform": "animation.llama.baby_transform.v1.0"
+      },
+      "animation_controllers": [
+        { "1": "controller.animation.target_rotate_setup" }, 
+ 		{ "1.1": "controller.animation.camera_rotate_setup" },
+        { "2": "controller.animation.invisible" },
+        { "3": "controller.animation.status" },
+        { "4": "controller.animation.numbers" },
+        { "5": "controller.animation.hostile_warnings" },
+        { "6": "controller.animation.pos" },
+        
+        { "move": "controller.animation.llama.move" },
+        { "baby": "controller.animation.llama.baby" }
+      ],
+      "render_controllers": [ 
+        "controller.render.target_rotate",
+        "controller.render.block",
+        "controller.render.llama" 
+      ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 38
+      }
+    }
+  }
+}

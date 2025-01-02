@@ -1,0 +1,26 @@
+//This JSON was modified by Netongas NG (@netongas_ng). Please do not use this document without permission.
+{
+  "format_version" : "1.10.0",
+  "animation_controllers" : {
+    "controller.animation.skeleton.attack" : {
+      "initial_state" : "default",
+      "states" : {
+        "chase_target" : {
+          "animations" : [ "skeleton_attack" ],
+          "transitions" : [
+            {
+              "default" : "!variable.has_target"
+            }
+          ]
+        },
+        "default" : {
+          "transitions" : [
+            {
+              "chase_target" : "variable.has_target"
+            }
+          ]
+        }
+      }
+    }
+  }
+}

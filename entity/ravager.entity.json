@@ -1,0 +1,77 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:ravager",
+      "textures": {
+        "default": "textures/entity/illager/ravager"
+      },
+      "materials": {
+        "default": "ravager"
+      },
+      "geometry": {
+        "default": "geometry.ravager",
+        "target": "geometry.target_rotate_28",
+        "block": "geometry.block_28"
+      },
+      "render_controllers": [
+        "controller.render.target_rotate",
+        "controller.render.block",
+        "controller.render.ravager"
+      ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 57
+      },
+      "particle_effects": {
+         "stun_particles": "minecraft:stunned_emitter",
+      
+         "invisible": "invisible",
+         "status_setup": "status_setup",
+         "health_setup": "health_setup",
+         "hostile_warnings": "hostile_warnings",
+         "pos": "pos",
+         "pos_egg": "pos_ravager"
+      },
+      "sound_effects": {"inception_horn": "inception_horn", "inception_horn_loud": "inception_horn_loud", "mob_sound": "loud_mob.ravager.ambient"},
+      
+      "animations": {
+        "invisible": "controller.animation.invisible",
+        "status": "controller.animation.status",
+        "numbers": "controller.animation.numbers",
+        "target_rotate": "animation.target_rotate", 
+        "camera_rotate": "animation.camera_rotate",
+        "hostile_warnings": "controller.animation.hostile_warnings",
+        "pos": "controller.animation.pos",
+        
+        "walk": "animation.ravager.walk",
+        "look_at_target": "animation.common.look_at_target",
+        "idle_mouth": "animation.ravager.idle_mouth",
+        "stunned": "animation.ravager.stunned",
+        "roaring": "animation.ravager.roaring",
+        "move": "controller.animation.ravager.move",
+        "head": "controller.animation.ravager.head_movement",
+        "biting": "animation.ravager.biting"
+      },
+      "scripts": {
+        "pre_animation": [
+          "variable.roar_length = 1.0;", // in seconds
+          "variable.bite_anim_duration = 0.75f;", // in seconds
+          "variable.bite_neck_length = 10;"
+        ],
+        "animate": [
+          "target_rotate", 
+		  "camera_rotate",
+          "hostile_warnings",
+          "invisible",
+          "status",
+          "numbers",
+          "pos",
+          
+          "move",
+          "head"
+        ]
+      }
+    }
+  }
+}

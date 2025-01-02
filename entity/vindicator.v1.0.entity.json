@@ -1,0 +1,63 @@
+{
+  "format_version": "1.8.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:vindicator",
+      "materials": { "default": "vindicator" },
+      "textures": { "default": "textures/entity/vindicator" },
+      "geometry": { 
+        "default": "geometry.vindicator",
+        "target": "geometry.target_rotate_28",
+        "block": "geometry.block_28"
+      },
+      "scripts": {
+        "scale": "0.9375"
+      },
+      "particle_effects": {
+      
+         "invisible": "invisible",
+         "status_setup": "status_setup",
+         "health_setup": "health_setup",
+         "hostile_warnings": "hostile_warnings",
+         "pos": "pos",
+         "pos_egg": "pos_vindicator"
+      },
+      "sound_effects": {"inception_horn": "inception_horn", "inception_horn_loud": "inception_horn_loud", "mob_sound": "loud_mob.vindicator.idle"},
+      
+      "animations": {
+        "target_rotate": "animation.target_rotate", 
+        "camera_rotate": "animation.camera_rotate",
+        
+        "look_at_target_default": "animation.humanoid.look_at_target.default.v1.0",
+        "look_at_target_gliding": "animation.humanoid.look_at_target.gliding.v1.0",
+        "look_at_target_swimming": "animation.humanoid.look_at_target.swimming.v1.0",
+        "vindicator_base": "animation.vindicator.base",
+        "vindicator_attack": "animation.vindicator.attack",
+        "vindicator_walk": "animation.vindicator.walk"
+      },
+      "animation_controllers": [
+        { "1": "controller.animation.target_rotate_setup" }, 
+ 		{ "1.1": "controller.animation.camera_rotate_setup" },
+        { "2": "controller.animation.invisible" },
+        { "3": "controller.animation.status" },
+        { "4": "controller.animation.numbers" },
+        { "5": "controller.animation.hostile_warnings" },
+        { "6": "controller.animation.pos" },
+        
+        { "look_at_target": "controller.animation.humanoid.look_at_target" },
+        { "vindicator_base": "controller.animation.vindicator.base.v1.0" }
+      ],
+      "render_controllers": [ 
+        "controller.render.target_rotate",
+        "controller.render.block",
+        "controller.render.vindicator" 
+      ],
+      "enable_attachables": true,
+      "hide_armor": true,
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 39
+      }
+    }
+  }
+}

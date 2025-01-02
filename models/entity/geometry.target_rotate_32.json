@@ -1,0 +1,15 @@
+{
+  "format_version": "1.8.0",
+  "geometry.target_rotate_32": {
+    "visible_bounds_width": 1,
+    "visible_bounds_height": 1,
+    "visible_bounds_offset": [ 0, 0.5, 0 ],
+    "bones": [
+      {
+        "name": "target",
+        "locators": {"target_rotate": [0, 32, 0]},
+        "pivot": [ 0.0, 0.0, 0.0 ]
+      }
+    ]
+  }
+}

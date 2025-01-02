@@ -1,0 +1,63 @@
+{
+  "format_version": "1.10.0",
+  "minecraft:client_entity": {
+    "description": {
+      "identifier": "minecraft:squid",
+      "materials": { "default": "squid" },
+      "textures": {
+        "default": "textures/entity/squid"
+      },
+      "geometry": {
+        "default": "geometry.squid",
+        "target": "geometry.target_rotate_5",
+        "block": "geometry.block_5"
+      },
+      "particle_effects": {
+      
+         "invisible": "invisible",
+         "status_setup": "status_setup",
+         "health_setup": "health_setup",
+         "hostile_warnings": "hostile_warnings",
+         "pos": "pos",
+         "pos_egg": "pos_squid"
+      },
+      "sound_effects": {"inception_horn": "inception_horn", "inception_horn_loud": "inception_horn_loud", "mob_sound": ""},
+      
+      "animations": {
+        "invisible": "controller.animation.invisible",
+        "status": "controller.animation.status",
+        "numbers": "controller.animation.numbers",
+        "target_rotate": "animation.target_rotate", 
+        "camera_rotate": "animation.camera_rotate",
+        "hostile_warnings": "controller.animation.hostile_warnings",
+        "pos": "controller.animation.pos",
+        
+        "move": "animation.squid.move",
+        "squid_rotate": "animation.squid.rotate"
+      },
+      "scripts": {
+        "animate": [
+          "target_rotate", 
+		  "camera_rotate",
+          "hostile_warnings",
+          "invisible",
+          "status",
+          "numbers",
+          "pos",
+          
+          "move",
+          "squid_rotate"
+        ]
+      },
+      "render_controllers": [ 
+        "controller.render.target_rotate",
+        "controller.render.block",
+        "controller.render.squid"
+      ],
+      "spawn_egg": {
+        "texture": "spawn_egg",
+        "texture_index": 15
+      }
+    }
+  }
+}
